@@ -256,7 +256,7 @@ def match_time_series(conn,period):
     first_match_saved_activity=0
 
     #CSV
-    csvFilePath='time_series_match.csv'
+    csvFilePath='time_series_match-period-'+str(period)+'min.csv'
     new_df = pd.DataFrame(
         columns=['activity'])
 
@@ -407,6 +407,7 @@ def main():
         #select_2(conn)
         #top_map_to_csv(conn=conn,top=50)
         match_time_series(conn,15)
+        match_time_series(conn, 5)
 
 
 if __name__ == '__main__':
