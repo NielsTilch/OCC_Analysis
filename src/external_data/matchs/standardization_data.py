@@ -1,4 +1,5 @@
 import argparse
+from datetime import datetime
 
 import numpy as np
 import pandas as pd
@@ -62,10 +63,13 @@ def date_mutation(date):
 
     year_hour_separator = date.split(" ")
     ymd_date = year_hour_separator[0].split("-")
+    ymd_date[2] = '20'+ymd_date[2]
     hm_date = year_hour_separator[1].split(":")
 
+    #Concatenate all of the date attribute in a array --> ['DD','MM','YY','hh','mm']
     constructor_date=np.concatenate((ymd_date,hm_date))
 
+    #Month converter
     switch={
         'Jan':1,
         'Feb': 2,
@@ -81,7 +85,10 @@ def date_mutation(date):
         'Dec': 12
     }
 
+    #Convert the month in the array
     constructor_date[1] = switch.get(constructor_date[1])
+
+    #Convert AM and PM to 0-24h structure
     if (year_hour_separator[2] == 'PM' and constructor_date[3] != '12'):
         constructor_date[3] = str(int(constructor_date[3]) + 12)
 
@@ -103,7 +110,7 @@ def extract_data_to_newdf(cfg):
     df = pd.read_csv(cfg.origin)
 
     #New dataframe for new csv
-    new_df = pd.DataFrame(columns=['date_day','date_months','date_year','date_hour','date_minute','map_name','length_hour','length_minute','length_second','participants','winner','cloudy_ver'])
+    new_df = pd.DataFrame(columns=['date_day','date_months','date_year','date_hour','date_minute','date_full','map_name','length_hour','length_minute','length_second','participants','winner','cloudy_ver'])
     new_df.to_csv('new_data.csv', index=False,sep=";")
     #Loop for every row of dataframe
     for i, row in df.iterrows():
@@ -112,21 +119,24 @@ def extract_data_to_newdf(cfg):
         if i%1000==0:
             print('Item number ',i,' done ...')
 
-            #Clean RAM to speed up
+            #Clean RAM and save to csv to speed up process
             new_df.to_csv('new_data.csv', mode='a',index=False,header=False,sep=";")
             new_df = pd.DataFrame(
-                columns=['date_day', 'date_months', 'date_year', 'date_hour', 'date_minute', 'map_name', 'length_hour',
+                columns=['date_day', 'date_months', 'date_year', 'date_hour', 'date_minute','date_full', 'map_name', 'length_hour',
                          'length_minute', 'length_second', 'participants', 'winner', 'cloudy_ver'])
 
         #Standardization function
         new_date=date_mutation(row['end_date'])
         new_length=length_to_standart_time(row['length'],row['cloudy-ver'])
 
+        #Turn time date into time stamp
+        full_date = datetime(year=int(new_date[2]),month=int(new_date[1]),day=int(new_date[0]),hour=int(new_date[3]),minute=int(new_date[4]),microsecond=0).timestamp()
 
-        data= [[new_date[0],new_date[1],new_date[2],new_date[3],new_date[4],row['map_name'],new_length[0],new_length[1],new_length[2],row['participants'],row['winner'],row['cloudy-ver']]]
+        #Put all of the data in 'data' variable
+        data= [[new_date[0],new_date[1],new_date[2],new_date[3],new_date[4],full_date,row['map_name'],new_length[0],new_length[1],new_length[2],row['participants'],row['winner'],row['cloudy-ver']]]
 
         df2 = pd.DataFrame(data,
-            columns=['date_day','date_months','date_year','date_hour','date_minute','map_name','length_hour','length_minute','length_second','participants','winner','cloudy_ver'])
+            columns=['date_day','date_months','date_year','date_hour','date_minute','date_full','map_name','length_hour','length_minute','length_second','participants','winner','cloudy_ver'])
 
         new_df = pd.concat([new_df,df2],axis=0)
 
