@@ -8,7 +8,7 @@ import pandas as pd
 import requests
 from datetime import datetime
 
-csv_path = "external_data/matchs/new_data.csv"
+csv_path = "external_data/matchs/data/new_data.csv"
 
 
 

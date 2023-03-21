@@ -48,7 +48,7 @@ cur.execute(create_map_mapping)
 
 
 #Read the dataset
-df = pd.read_csv('new_data.csv',sep=";")
+df = pd.read_csv('data/new_data.csv', sep=";")
 
 #Go through all of the matchs to query to the database
 for i, row in df.iterrows():
