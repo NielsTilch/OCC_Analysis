@@ -23,6 +23,17 @@ def create_connection():
     return conn
 
 def match_time_series(conn,period):
+    """
+    Create the time series csv sheet with a pre-defined period (in minutes)
+
+    :param conn: key connection to database
+            period: period between two point of the time series (in minutes)
+
+    :return None
+    """
+
+
+
     period=period*60
 
     cur = conn.cursor()
@@ -65,6 +76,8 @@ def match_time_series(conn,period):
     tracker = 0
     #While loop
     while(first_date<=first_match_periodPlayerCount):
+
+        #Exporting dataframe to csv to clear up the cache and RAM for better execution performance
         if tracker%1000==0:
             print("Tracking step number "+str(tracker)+" - "+str(np.floor((first_match_periodPlayerCount-first_date)/(last_date-first_date)*10000)/100)+"% remaining")
             new_df.to_csv(csvFilePath, mode='a', index=False, header=False, sep=";")
@@ -80,16 +93,25 @@ def match_time_series(conn,period):
         interval_first = first_match_periodPlayerCount
         interval_last = first_match_periodPlayerCount + period
 
+        #SQL query line
         query = """ SELECT participants
                     FROM MATCH
                     WHERE """ + str(interval_first) + """ <= date_full AND """ + str(interval_last) + """ >= date_full """
 
+        #Execute SQL query
         cur.execute(query)
+
+        #Retrieve the data
         rows = cur.fetchall()
 
+        #Total activity number of player array
         total_activity = []
         first = True
+
+        #If the number of retrieved rows isn't null, go through the rows
         if len(rows)!=0:
+
+            #For loop to go through the rows
             for row in rows:
                 total_activity.append(row[0])
 
@@ -100,6 +122,8 @@ def match_time_series(conn,period):
 
                 #Get Mean activity
                 mean_activity = np.mean(total_activity)
+
+        #Case if no row returned by the query, we take the closest (by time) number of player recorded
         else:
             mean_activity=first_match_saved_activity
 
@@ -107,9 +131,10 @@ def match_time_series(conn,period):
         df2 = pd.DataFrame([[np.ceil(mean_activity)]],
             columns=['activity'])
 
+        #Concatenate the dataframes
         new_df = pd.concat([new_df,df2],axis=0)
 
-
+    #Add last data to the csv file
     new_df.to_csv(csvFilePath, mode='a', index=False, header=False, sep=";")
 
 
