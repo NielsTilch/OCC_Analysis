@@ -36,6 +36,20 @@ create_map_mapping="""CREATE TABLE `MATCH` (
 	`participants` INT NOT NULL,
 	`winner` VARCHAR,
 	`cloudy_ver` INT NOT NULL,
+	`distance_spawns` INT,
+	`time_to_objective` INT,
+	`time_to_interception` INT,
+	`time_to_own_objective` INT,
+	`width_main_lane` INT,
+	`width_objective_lane` INT,
+	`water_link_ratio` INT,
+	`level_armor` INT,
+	`level_gear` INT,
+	`defense_gear_level` INT,
+	`time_tunneling_to_wool_grab` INT,
+	`mean_time_to_first_capture` INT,
+	`slowness_when_capture_level` INT,
+	`number_of_path_to_objective` INT,
 	PRIMARY KEY (`ID`)
 );"""
 
