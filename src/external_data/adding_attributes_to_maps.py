@@ -32,7 +32,7 @@ while(True):
             rows=[]
             rows = np.array(test_rows[0])
 
-            print("Put nothing if nothing is needed to change")
+            print("-----  Put nothing if nothing is needed to change  -----\n\n")
             #Input of all of the possible added attributes
 
             #Attribute distance_spawns
@@ -76,7 +76,7 @@ while(True):
                 rows[11]=input_level_armor
 
             #Attribute level_gear
-            input_level_gear = int(input("Level of gear"))
+            input_level_gear = int(input("Level of gear : "))
             if input_level_gear != "":
                rows[12]=input_level_gear
 
@@ -105,7 +105,7 @@ while(True):
             if input_number_of_path_to_objective !="":
                 rows[17]=input_number_of_path_to_objective
 
-            a = 0
+            #Update sql command
             insert_map_query = """
                                 UPDATE 
                                         MAP_MAPPING 
@@ -128,7 +128,8 @@ while(True):
                                 
                                 WHERE
                                     MAP_NAME='"""+str(rows[0])+"""'"""
-            print(insert_map_query)
+
+            #Execute query and commit the result to database
             cur.execute(insert_map_query)
             conn.commit()
 
