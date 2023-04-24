@@ -105,8 +105,33 @@ while(True):
             if input_number_of_path_to_objective !="":
                 rows[17]=input_number_of_path_to_objective
 
+            a = 0
+            insert_map_query = """
+                                UPDATE 
+                                        MAP_MAPPING 
+                                    
+                                SET 
+                                    distance_spawns="""+str(rows[4])+""",
+                                    time_to_objective="""+str(rows[5])+""",
+                                    time_to_interception="""+str(rows[6])+""",
+                                    time_to_own_objective="""+str(rows[7])+""",
+                                    width_main_lane="""+str(rows[8])+""",
+                                    width_objective_lane="""+str(rows[9])+""",
+                                    water_link_ratio="""+str(rows[10])+""",
+                                    level_armor="""+str(rows[11])+""",
+                                    level_gear="""+str(rows[12])+""", 
+                                    defense_gear_level="""+str(rows[13])+""", 
+                                    time_tunneling_to_wool_grab="""+str(rows[14])+""",
+                                    mean_time_to_first_capture="""+str(rows[15])+""",
+                                    slowness_when_capture_level="""+str(rows[16])+""",
+                                    number_of_path_to_objective="""+str(rows[17])+"""
+                                
+                                WHERE
+                                    MAP_NAME='"""+str(rows[0])+"""'"""
+            print(insert_map_query)
+            cur.execute(insert_map_query)
+            conn.commit()
 
-            #Insert INTO table
         else:
             print("Map "+str(input_map)+"doesn't exist")
     else:
