@@ -16,10 +16,24 @@ except Error as e:
 #Commend to create table mapping
 drop_map_mapping="DROP TABLE `MAP_MAPPING`;"
 create_map_mapping="""CREATE TABLE `MAP_MAPPING` (
-	`MAP_NAME` VARCHAR,
-	`GAMEMODE` VARCHAR,
-	`POOL` VARCHAR,
+	`MAP_NAME` VARCHAR NOT NULL,
+	`GAMEMODE` VARCHAR NOT NULL,
+	`POOL` VARCHAR NOT NULL,
 	AUTHORS VARCHAR,
+	`distance_spawns` INT,
+	`time_to_objective` INT,
+	`time_to_interception` INT,
+	`time_to_own_objective` INT,
+	`width_main_lane` INT,
+	`width_objective_lane` INT,
+	`water_link_ratio` INT,
+	`level_armor` INT,
+	`level_gear` INT,
+	`defense_gear_level` INT,
+	`time_tunneling_to_wool_grab` INT,
+	`mean_time_to_first_capture` INT,
+	`slowness_when_capture_level` INT,
+	`number_of_path_to_objective` INT,
 	PRIMARY KEY (`MAP_NAME`)
 );"""
 
