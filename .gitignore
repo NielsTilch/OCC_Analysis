@@ -132,3 +132,5 @@ dmypy.json
 
 /src/external_data/maps/CommunityMaps/
 /src/external_data/maps/PublicMaps/
+/src/chat_data_extraction/logs_data/log_paths.txt
+/src/chat_data_extraction/logs_data/compact_logs/
