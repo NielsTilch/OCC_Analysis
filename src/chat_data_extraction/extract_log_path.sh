@@ -8,3 +8,5 @@ cd logs
 
 realpath $(find -name '*.log.gz')
 realpath $(find -name '*.log.gz') > $project_dir
+
+python compact_logs.py
