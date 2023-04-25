@@ -30,7 +30,7 @@ create_map_mapping="""CREATE TABLE `MAP_MAPPING` (
 	`level_armor` INT,
 	`level_gear` INT,
 	`defense_gear_level` INT,
-	`time_tunneling_to_wool_grab` INT,
+	`time_tunneling_to_objective` INT,
 	`mean_time_to_first_capture` INT,
 	`slowness_when_capture_level` INT,
 	`number_of_path_to_objective` INT,
@@ -39,6 +39,8 @@ create_map_mapping="""CREATE TABLE `MAP_MAPPING` (
 
 cur = conn.cursor()
 cur.execute(drop_map_mapping)
+conn.commit()
+
 cur.execute(create_map_mapping)
 
 conn.commit()
