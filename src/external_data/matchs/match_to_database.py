@@ -11,7 +11,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--path', type=str, default="new_data.csv", help='Path of the file name')
 cfg = parser.parse_args()
 
-
+#TODO : Database connection to util.main.database
 #Database connection
 conn = None
 try:
@@ -19,6 +19,7 @@ try:
 except Error as e:
     print(e)
 
+#TODO: Reset Match table function to util.main.database
 #Commend to create table mapping
 drop_map_mapping="DROP TABLE `MATCH`;"
 create_map_mapping="""CREATE TABLE `MATCH` (
@@ -60,7 +61,7 @@ for i, row in df.iterrows():
 
     # Avoiding duplication error due to unique key
     try:
-
+        #TODO: Funciton insert into match table to util.main.database
         #Query
         insert_map_query = """INSERT INTO MATCH 
         (ID,date_day,date_month,date_year,date_hour,date_minute,date_full,map_name,length_hour,length_minute,length_second,participants,winner,cloudy_ver) 

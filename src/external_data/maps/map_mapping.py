@@ -5,6 +5,8 @@ import requests
 
 database = "./../database.db"
 
+#TODO : Migration of connection to database
+
 #Database connection
 conn = None
 try:
@@ -12,6 +14,8 @@ try:
 except Error as e:
     print(e)
     exit(1)
+
+#TODO: Reset of map_mapping table funciton -> to util database
 
 #Commend to create table mapping
 drop_map_mapping="DROP TABLE `MAP_MAPPING`;"
@@ -129,6 +133,8 @@ for path in lines:
 
     #Avoiding duplication error due to unique key
     try:
+
+        #TODO : Migration of code to util database insert map in map_mapping table
         insert_map_query = "INSERT INTO MAP_MAPPING (MAP_NAME,GAMEMODE, POOL, AUTHORS) VALUES (?,?,?,?) "
         map_data=(map_name,mode_type,pool,authors_string)
         cur.execute(insert_map_query,map_data)
