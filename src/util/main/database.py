@@ -19,7 +19,7 @@ def create_connection() -> Connection | None:
         return conn
     except Error as e:
         print(e)
-        return None
+        raise Exception('Could not connect to database !')
 
 
 def test_map_exists(conn: sqlite3.dbapi2.Connection, map_name: str) -> bool:
@@ -121,7 +121,7 @@ def add_attributes_to_map(conn: sqlite3.dbapi2.Connection, map_name: str, values
         raise e
 
 
-def top_map_to_df(conn: sqlite3.dbapi2.Connection,top: int):
+def top_map_to_df(conn: sqlite3.dbapi2.Connection, top: int):
     """
     Return the top n map played
 
@@ -153,7 +153,7 @@ def top_map_to_df(conn: sqlite3.dbapi2.Connection,top: int):
 
     rows = cur.fetchall()
 
-    return DataFrame(rows, columns=['Map name','Minutes played'])
+    return DataFrame(rows, columns=['Map name', 'Minutes played'])
 
 
 def get_specific_map(conn: sqlite3.dbapi2.Connection, map_name: str) -> list:
@@ -179,4 +179,122 @@ def get_specific_map(conn: sqlite3.dbapi2.Connection, map_name: str) -> list:
     cur.execute(command_first)
     return cur.fetchall()
 
-top_map_to_df(conn=create_connection(),top=15)
+
+def reset_match_table(conn: sqlite3.dbapi2.Connection) -> None:
+    """
+    Reset 'MATCH' table
+
+    :param conn: Connection to the database
+    :return:
+    """
+
+    drop_map_mapping = "DROP TABLE `MATCH`;"
+    create_map_mapping = """CREATE TABLE `MATCH` (
+    	`ID` INT NOT NULL,
+    	`date_day` INT NOT NULL,
+    	`date_month` INT NOT NULL,
+    	`date_year` INT NOT NULL,
+    	`date_hour` INT NOT NULL,
+    	`date_minute` INT NOT NULL,
+    	`date_full` BIGINT(20) NOT NULL,
+    	`map_name` VARCHAR NOT NULL,
+    	`length_hour` INT NOT NULL,
+    	`length_minute` INT NOT NULL,
+    	`length_second` INT NOT NULL,
+    	`participants` INT NOT NULL,
+    	`winner` VARCHAR,
+    	`cloudy_ver` INT NOT NULL,
+    	PRIMARY KEY (`ID`)
+    );"""
+
+    cur = conn.cursor()
+    try:
+        cur.execute(drop_map_mapping)
+    except:
+        print("Table MATCH doesn't exist")
+    cur.execute(create_map_mapping)
+    conn.commit()
+    cur.close()
+
+
+def insert_match(conn: sqlite3.dbapi2.Connection, values, id: int):
+    cur = conn.cursor()
+
+    # Query
+    insert_map_query = """INSERT INTO MATCH 
+            (ID,date_day,date_month,date_year,date_hour,date_minute,date_full,map_name,length_hour,length_minute,length_second,participants,winner,cloudy_ver) 
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?) """
+
+    # Variables of the query
+    data = (
+        id,
+        values['date_day'],
+        values['date_months'],
+        values['date_year'],
+        values['date_hour'],
+        values['date_minute'],
+        values['date_full'],
+        values['map_name'],
+        values['length_hour'],
+        values['length_minute'],
+        values['length_second'],
+        values['participants'],
+        values['winner'],
+        values['cloudy_ver']
+    )
+
+    cur.execute(insert_map_query, data)
+
+
+def reset_map_table(conn: sqlite3.dbapi2.Connection) -> None:
+    drop_map_mapping = "DROP TABLE `MAP_MAPPING`;"
+    create_map_mapping = """CREATE TABLE `MAP_MAPPING` (
+    	`MAP_NAME` VARCHAR NOT NULL,
+    	`GAMEMODE` VARCHAR NOT NULL,
+    	`POOL` VARCHAR NOT NULL,
+    	AUTHORS VARCHAR,
+    	`distance_spawns` INT,
+    	`time_to_objective` INT,
+    	`time_to_interception` INT,
+    	`time_to_own_objective` INT,
+    	`width_main_lane` INT,
+    	`width_objective_lane` INT,
+    	`water_link_ratio` INT,
+    	`level_armor` INT,
+    	`level_gear` INT,
+    	`defense_gear_level` INT,
+    	`time_tunneling_to_objective` INT,
+    	`mean_time_to_first_capture` INT,
+    	`slowness_when_capture_level` INT,
+    	`number_of_path_to_objective` INT,
+    	PRIMARY KEY (`MAP_NAME`)
+    );"""
+    cur = conn.cursor()
+
+    cur.execute(drop_map_mapping)
+    conn.commit()
+
+    cur.execute(create_map_mapping)
+    conn.commit()
+
+    cur.close()
+
+
+def insert_map(conn: sqlite3.dbapi2.Connection, map_name: str, mode_type: str, pool: str, authors_string: str) -> None:
+    cur = conn.cursor()
+
+    try:
+        insert_map_query = "INSERT INTO MAP_MAPPING (MAP_NAME,GAMEMODE, POOL, AUTHORS) VALUES (?,?,?,?) "
+        map_data = (map_name, mode_type, pool, authors_string)
+        cur.execute(insert_map_query, map_data)
+        conn.commit()
+
+        # Avoiding duplication error due to unique key
+    except Error as e:
+        print('Duplicate avoided')
+        print(e)
+
+    cur.close()
+
+
+top_map_to_df(conn=create_connection(), top=15)
