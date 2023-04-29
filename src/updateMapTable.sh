@@ -11,7 +11,7 @@ cd ./CommunityMaps
 git pull
 cd ./../PublicMaps
 git pull
-cd ./..
+cd ./../../..
 
 
 else
@@ -23,9 +23,9 @@ git clone https://github.com/OvercastCommunity/CommunityMaps.git
 fi
 
 pwd
-find -name 'map.xml' > list_path_xmls.txt
+find -name 'map.xml' > ./external_data/maps/list_path_xmls.txt
 
 echo "Starting mapping to SQL ..."
-python map_mapping.py
+python -m external_data.maps.map_mapping.py
 
 echo "Done"
