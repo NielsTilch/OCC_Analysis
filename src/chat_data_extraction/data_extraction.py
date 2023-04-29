@@ -3,7 +3,6 @@ from datetime import datetime
 import numpy as np
 import pandas as pd
 from util.main.dict_util import combine_dict
-from util.main.database import create_connection
 
 def first_capture_time(content):
     """
