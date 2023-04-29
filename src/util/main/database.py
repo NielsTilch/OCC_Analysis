@@ -156,6 +156,27 @@ def top_map_to_df(conn: sqlite3.dbapi2.Connection,top: int):
     return DataFrame(rows, columns=['Map name','Minutes played'])
 
 
+def get_specific_map(conn: sqlite3.dbapi2.Connection, map_name: str) -> list:
+    """
+    Get the database output of a specific map
 
+    :param conn: Connection to the database
+    :param map_name: Name of the map
+    :return: The row of the map in the database
+    """
+
+    cur = conn.cursor()
+    command_first = """
+                        SELECT 
+                            * 
+                            
+                        FROM 
+                            MAP_MAPPING 
+                                    
+                        WHERE 
+                            MAP_NAME = '""" + str(map_name) + """'"""
+
+    cur.execute(command_first)
+    return cur.fetchall()
 
 top_map_to_df(conn=create_connection(),top=15)

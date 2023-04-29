@@ -1,16 +1,9 @@
 import sqlite3
 from sqlite3 import Error
 import numpy as np
+import util.main.database as db
 
-database = "./database.db"
-
-#Database connection
-conn = None
-try:
-    conn = sqlite3.connect(database=database)
-except Error as e:
-    print(e)
-
+conn = db.create_connection()
 cur = conn.cursor()
 
 #For loop until break
@@ -20,14 +13,9 @@ while(True):
     input_map = str(input("Name of the map (blank if you want to stop)"))
 
     if input_map != "":
-        #Command (I know you can sql inject)
-        command_first = """SELECT * 
-                                FROM MAP_MAPPING 
-                                WHERE MAP_NAME = '"""+str(input_map)+"""'"""
+        #Command
+        test_rows = db.get_specific_map(conn=conn, map_name=input_map)
 
-        cur.execute(command_first)
-
-        test_rows = cur.fetchall()
         if len(test_rows)>0:
             rows=[]
             rows = np.array(test_rows[0])
@@ -105,33 +93,7 @@ while(True):
             if input_number_of_path_to_objective !="":
                 rows[17]=input_number_of_path_to_objective
 
-            #Update sql command
-            insert_map_query = """
-                                UPDATE 
-                                        MAP_MAPPING 
-                                    
-                                SET 
-                                    distance_spawns="""+str(rows[4])+""",
-                                    time_to_objective="""+str(rows[5])+""",
-                                    time_to_interception="""+str(rows[6])+""",
-                                    time_to_own_objective="""+str(rows[7])+""",
-                                    width_main_lane="""+str(rows[8])+""",
-                                    width_objective_lane="""+str(rows[9])+""",
-                                    water_link_ratio="""+str(rows[10])+""",
-                                    level_armor="""+str(rows[11])+""",
-                                    level_gear="""+str(rows[12])+""", 
-                                    defense_gear_level="""+str(rows[13])+""", 
-                                    time_tunneling_to_wool_grab="""+str(rows[14])+""",
-                                    mean_time_to_first_capture="""+str(rows[15])+""",
-                                    slowness_when_capture_level="""+str(rows[16])+""",
-                                    number_of_path_to_objective="""+str(rows[17])+"""
-                                
-                                WHERE
-                                    MAP_NAME='"""+str(rows[0])+"""'"""
-
-            #Execute query and commit the result to database
-            cur.execute(insert_map_query)
-            conn.commit()
+            db.add_attributes_to_map(conn=conn,map_name=rows[0],values=rows)
 
         else:
             print("Map "+str(input_map)+"doesn't exist")
