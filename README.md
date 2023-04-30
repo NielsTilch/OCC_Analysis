@@ -1,12 +1,8 @@
 # OCC Match Analysis
 
+![Python](https://img.shields.io/github/pipenv/locked/python-version/NielsTilch/OCC_Analysis)
 
 Inside analysis of Overcast Community server's match
-
-## Install
-
-Python version : 3.10
-
 
 
 ## Status of project
