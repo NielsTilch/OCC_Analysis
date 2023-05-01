@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd ./external_data/maps
-
 if ! test -f "./CommunityMaps" ;
 then
 echo "fuck off"
