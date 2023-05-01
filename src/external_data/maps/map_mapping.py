@@ -20,10 +20,12 @@ for path in lines:
         print('Map number ', tracker, ' done ...')
 
 
-    mode_type = str(path.split('/')[2])
+    mode_type = str(path.split('/')[4])
     map_name=""
     player_max = -1
     authors=[]
+    coords=""
+    gotCoords=False
     f_map=None
     try:
         f_map = open(path[:-1],"r",encoding="utf8")
@@ -35,18 +37,38 @@ for path in lines:
         for xml_lines in content_xml:
 
             #Detection map name
-            if len(xml_lines.split('<name>'))==2:
+            if xml_lines.__contains__('<name>'):
                 map_name = str(xml_lines.split('>')[1].split('<')[0])
 
 
             #Number player max
-            if len(xml_lines.split('<players max="'))==2:
+            if xml_lines.__contains__('<players max="'):
                 try:
                     player_max = int((xml_lines.split('<players max="'))[1].split('"')[0])
                 except :
                     print("Problem with player max detection")
                     print("Map : ",map_name)
                     print("String : ",xml_lines.split('<players max="'))
+
+
+            #Get coords of the map
+            if not(gotCoords):
+
+                #From 'point' marker
+                if xml_lines.__contains__('<point'):
+                    gotCoords=True
+                    coords=str(xml_lines.split('>')[1].split('<')[0])
+
+                #From 'cuboid' marker
+                elif xml_lines.__contains__('<cuboid'):
+                    gotCoords = True
+                    coords = str(xml_lines.split('min')[1].split('"')[1])
+
+                #From 'cylinder' marker
+                elif xml_lines.__contains__('<cylinder'):
+                    gotCoords=True
+                    coords = str(xml_lines.split('base')[1].split('"')[1])
+
 
 
             #Authors
@@ -87,6 +109,6 @@ for path in lines:
     else :
         pool = "giga"
 
-    db.insert_map(conn=conn,map_name=map_name,mode_type=mode_type,pool=pool,authors_string=authors_string)
+    db.insert_map(conn=conn, map_name=map_name, mode_type=mode_type,pool=pool, authors_string=authors_string, path=path[:-9], coords=coords)
 
 conn.close()
