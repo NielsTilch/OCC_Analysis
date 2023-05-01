@@ -14,6 +14,7 @@
 ./external_data/maps/CommunityMaps/arcade/runner/deathrun_aperture/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/blockglitch/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/blockglitch_2_electric_boogaloo/map.xml
+./external_data/maps/CommunityMaps/arcade/standard/bn_dark_nebula/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/bomber_guys/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/dodge_ball/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/dodge_ball_stadium/map.xml
@@ -394,6 +395,7 @@
 ./external_data/maps/CommunityMaps/scorebox/standard/rangi_nui/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/research/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/resort/map.xml
+./external_data/maps/CommunityMaps/scorebox/standard/rockaway_bridge/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/stratosphere_tdm/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/vineyard/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/yonaguni/map.xml
@@ -886,6 +888,7 @@
 ./external_data/maps/PublicMaps/fun/arcade/biomes/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/block_runner_classic/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/block_runner_world_of_sports/map.xml
+./external_data/maps/PublicMaps/fun/arcade/bn_spacecraft/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/boat_bolt/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/cacti_terror/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/crazys_wool_run/map.xml
@@ -1067,6 +1070,15 @@
 ./external_data/maps/PublicMaps/mixed/standard/the_8th_law/map.xml
 ./external_data/maps/PublicMaps/other/ctp/azonarr/map.xml
 ./external_data/maps/PublicMaps/other/ctp/mistforge/map.xml
+./external_data/maps/PublicMaps/other/mm/mm_caved_in/map.xml
+./external_data/maps/PublicMaps/other/mm/mm_crossroad/map.xml
+./external_data/maps/PublicMaps/other/mm/mm_dark_scent/map.xml
+./external_data/maps/PublicMaps/other/mm/mm_decay/map.xml
+./external_data/maps/PublicMaps/other/mm/mm_discs/map.xml
+./external_data/maps/PublicMaps/other/mm/mm_fortress/map.xml
+./external_data/maps/PublicMaps/other/mm/mm_pyramid/map.xml
+./external_data/maps/PublicMaps/other/mm/mm_quarry/map.xml
+./external_data/maps/PublicMaps/other/mm/mm_rig/map.xml
 ./external_data/maps/PublicMaps/other/newstalgia/airclay_battle/map.xml
 ./external_data/maps/PublicMaps/other/newstalgia/claytress_battles/map.xml
 ./external_data/maps/PublicMaps/other/newstalgia/medieval_clayfare/map.xml
