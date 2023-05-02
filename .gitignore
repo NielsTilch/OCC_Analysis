@@ -135,3 +135,4 @@ dmypy.json
 /src/chat_data_extraction/logs_data/log_paths.txt
 /src/chat_data_extraction/logs_data/compact_logs/
 /src/chat_data_extraction/logs_data/unread_lines.txt
+/src/external_data/maps/attributes/map_transfer/file.txt
