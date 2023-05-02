@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-cd ./external_data/matchs
-
 #Update match list status
 #/code/
 
