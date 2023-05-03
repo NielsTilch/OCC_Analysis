@@ -16,6 +16,10 @@ if not (len(df_path)):
 
 file =open('external_data/maps/attributes/map_transfer/file.txt','w')
 for element in df_path.iterrows():
+
+    #Writing path of map in folder
     file.write(element[1][2][1:]+'\n')
+
+    #Writing
     file.write('For '+str(element[1][0])+' : /tp '+str(element[1][3])+'\n')
 file.close()

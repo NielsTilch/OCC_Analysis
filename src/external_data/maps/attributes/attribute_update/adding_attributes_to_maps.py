@@ -1,5 +1,3 @@
-import sqlite3
-from sqlite3 import Error
 import numpy as np
 import util.main.database as db
 
