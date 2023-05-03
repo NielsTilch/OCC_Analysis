@@ -309,6 +309,7 @@
 ./external_data/maps/CommunityMaps/flag/standard/lost_gardens/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/pipes_and_punters/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/purple_haze/map.xml
+./external_data/maps/CommunityMaps/flag/standard/quidditch/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/royal_rumble_classic/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/royal_rumble_II/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/stairs_to_nowhere/map.xml
