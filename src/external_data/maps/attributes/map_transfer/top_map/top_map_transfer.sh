@@ -5,7 +5,7 @@ file=$(pwd)'/file.txt'
 cd ./../../../../..
 source=$(pwd)
 echo $source
-python -m external_data.maps.attributes.map_transfer.map_transfer.specific_map.map_transfer
+python -m external_data.maps.attributes.map_transfer.top_map.top_map_transfer
 echo 'Getting top map done'
 
 cd C:\Users
