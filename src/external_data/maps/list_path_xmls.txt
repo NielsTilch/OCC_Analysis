@@ -23,6 +23,7 @@
 ./external_data/maps/CommunityMaps/arcade/standard/fall_guys/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/gladiators/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/juggernauts_hall_sacrifice/map.xml
+./external_data/maps/CommunityMaps/arcade/standard/knockout_stadium/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/mega_cacti_mania/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/mega_cacti_terror_teams/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/mobarena_silent_city/map.xml
