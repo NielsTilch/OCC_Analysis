@@ -29,6 +29,7 @@
 ./external_data/maps/CommunityMaps/arcade/standard/mobarena_silent_city/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/player_blender/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/polar_spleef/map.xml
+./external_data/maps/CommunityMaps/arcade/standard/skynet/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/the_dropper_community_edition/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/the_grand_dueling_tournament_ii/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/the_hopper/map.xml
@@ -77,12 +78,16 @@
 ./external_data/maps/CommunityMaps/ctw/halloween/villa_boo/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/3084/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/ad_astra/map.xml
+./external_data/maps/CommunityMaps/ctw/standard/after_hours/map.xml
+./external_data/maps/CommunityMaps/ctw/standard/after_hours_ii/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/agrorythe/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/annealing_ii/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/apocalypse_ctw/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/apostle/map.xml
+./external_data/maps/CommunityMaps/ctw/standard/arcane_ctw/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/autumn_breeze/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/belvedere/map.xml
+./external_data/maps/CommunityMaps/ctw/standard/black_betty/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/blossom_ctw/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/brittlebush/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/brittlebush_ii/map.xml
@@ -386,6 +391,7 @@
 ./external_data/maps/CommunityMaps/scorebox/standard/climate/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/coral/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/crimson/map.xml
+./external_data/maps/CommunityMaps/scorebox/standard/dead_end/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/death_denile/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/double_cross/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/double_take/map.xml
