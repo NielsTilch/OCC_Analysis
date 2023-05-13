@@ -6,16 +6,16 @@ echo "1- Specific transfer of a map"
 echo "2- Batch of top maps transfer"
 echo "3- Reset map file"
 
-read -p "Choice of transfer" choice
+read -p "Choice of transfer : " choice
 
-if [ $choice = '1' ];then
+if [ $choice = '2' ];then
   cd ./top_map
   bash top_map_transfer.sh
 fi
 
-if [ $choice = '2' ];then
+if [ $choice = '1' ];then
   cd ./specific_map
-  bash specific_map_transfer
+  bash specific_map_transfer.sh
 fi
 
 if [ $choice = '3' ];then

@@ -152,6 +152,7 @@
 ./external_data/maps/CommunityMaps/ctw/standard/niflheim/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/nobles_district/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/notre_daaaaam_of_paris/map.xml
+./external_data/maps/CommunityMaps/ctw/standard/nyxis/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/oaken_meadow_mini/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/oasis_ctw/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/oceano_ctw/map.xml
@@ -302,6 +303,7 @@
 ./external_data/maps/CommunityMaps/flag/standard/cherno_ctf/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/ciudad_costera/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/courtyard_classic/map.xml
+./external_data/maps/CommunityMaps/flag/standard/crater_resort/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/disc_wars_ii/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/embargo/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/flag_football_ice_rift/map.xml
