@@ -1,8 +1,9 @@
 #!/bin/bash
 
+cd ./..
 file=$(pwd)'/file.txt'
 
-cd ./../../../../..
+cd ./../../../..
 source=$(pwd)
 echo $source
 python -m external_data.maps.attributes.map_transfer.top_map.top_map_transfer

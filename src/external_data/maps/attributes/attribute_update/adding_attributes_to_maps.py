@@ -8,7 +8,7 @@ cur = conn.cursor()
 while(True):
 
     #Input map
-    input_map = str(input("Name of the map (blank if you want to stop)"))
+    input_map = str(input("Name of the map (blank if you want to stop) : "))
 
     if input_map != "":
         #Command
@@ -18,7 +18,7 @@ while(True):
             rows=[]
             rows = np.array(test_rows[0])
 
-            print("-----  Put nothing if nothing is needed to change  -----\n\n")
+            print("-----  Put nothing if nothing is needed to be changed  -----\n\n")
             #Input of all of the possible added attributes
 
             #Attribute distance_spawns

@@ -2,6 +2,8 @@
 
 echo 'Updating maps attributes ...'
 
-python -m adding_attributes_to_maps
+cd ./../../../..
+
+python -m external_data.maps.attributes.attribute_update.adding_attributes_to_maps
 
 echo 'Done'
