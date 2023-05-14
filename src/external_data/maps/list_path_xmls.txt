@@ -330,7 +330,6 @@
 ./external_data/maps/CommunityMaps/flag/standard/west_rider/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/zipline/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/zipline_II_the_next_test/map.xml
-./external_data/maps/CommunityMaps/flag/standard/zipline_moar_gunz_edition/map.xml
 ./external_data/maps/CommunityMaps/koth/christmas/quadromas_rage/map.xml
 ./external_data/maps/CommunityMaps/koth/christmas/stratomas_rage/map.xml
 ./external_data/maps/CommunityMaps/koth/halloween/biohazard/map.xml
