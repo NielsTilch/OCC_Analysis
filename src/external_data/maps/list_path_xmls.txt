@@ -256,6 +256,7 @@
 ./external_data/maps/CommunityMaps/dtcm/standard/mushroom_monuments/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/mythica_dtm/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/natsukashii/map.xml
+./external_data/maps/CommunityMaps/dtcm/standard/operation_overlord/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/parabola/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/parabola_ii/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/pineium_dtm/map.xml
@@ -315,6 +316,7 @@
 ./external_data/maps/CommunityMaps/flag/standard/keeper/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/limit/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/lost_gardens/map.xml
+./external_data/maps/CommunityMaps/flag/standard/lush_oasis/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/pipes_and_punters/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/purple_haze/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/quidditch/map.xml
@@ -399,6 +401,7 @@
 ./external_data/maps/CommunityMaps/scorebox/standard/fishing_frenzy/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/limitless/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/miner_sixty_niner/map.xml
+./external_data/maps/CommunityMaps/scorebox/standard/mont_blanc/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/over_troubled_water/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/polders/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/rangi_nui/map.xml
@@ -959,7 +962,6 @@
 ./external_data/maps/PublicMaps/fun/blitz/aureola_rage/map.xml
 ./external_data/maps/PublicMaps/fun/blitz/bills_town_blitz/map.xml
 ./external_data/maps/PublicMaps/fun/blitz/bliss/map.xml
-./external_data/maps/PublicMaps/fun/blitz/bliss_rage/map.xml
 ./external_data/maps/PublicMaps/fun/blitz/blitzminers/map.xml
 ./external_data/maps/PublicMaps/fun/blitz/bouncy_stadium/map.xml
 ./external_data/maps/PublicMaps/fun/blitz/cairo_blitz/map.xml
