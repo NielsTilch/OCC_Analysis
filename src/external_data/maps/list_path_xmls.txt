@@ -525,6 +525,7 @@
 ./external_data/maps/PublicMaps/ctw/standard/mushroom_gorge/map.xml
 ./external_data/maps/PublicMaps/ctw/standard/nextgen/map.xml
 ./external_data/maps/PublicMaps/ctw/standard/no_mans_land/map.xml
+./external_data/maps/PublicMaps/ctw/standard/oriental/map.xml
 ./external_data/maps/PublicMaps/ctw/standard/ouroboros/map.xml
 ./external_data/maps/PublicMaps/ctw/standard/persisto/map.xml
 ./external_data/maps/PublicMaps/ctw/standard/pigland/map.xml
