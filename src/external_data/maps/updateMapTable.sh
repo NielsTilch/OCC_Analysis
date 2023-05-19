@@ -20,9 +20,11 @@ git clone https://github.com/OvercastCommunity/CommunityMaps.git
 
 fi
 
+#Put all map xmls in list text file
 pwd
 find -name 'map.xml' > ./external_data/maps/list_path_xmls.txt
 
+#Mapping database
 echo "Starting mapping to SQL ..."
 python -m external_data.maps.map_mapping
 
