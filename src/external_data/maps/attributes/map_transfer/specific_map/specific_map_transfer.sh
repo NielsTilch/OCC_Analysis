@@ -30,13 +30,13 @@ cd C:\Users
 track=0
 while read p; do
 
-  #Copy paste map if odd
+  #Copy paste map file if odd
   if [ $((track%2)) == 0 ]; then
     map=$source$p
     map=${map::-1}
     cp -r $map $mc_path'/saves'
 
-  #echo coords if even
+  #echo coords of the map if even
   else
     echo $p
   fi
