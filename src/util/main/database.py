@@ -1,4 +1,3 @@
-import csv
 import sqlite3
 from sqlite3 import Error, Connection
 from numpy import array
@@ -265,6 +264,16 @@ def reset_match_table(conn: sqlite3.dbapi2.Connection) -> None:
 
 
 def insert_match(conn: sqlite3.dbapi2.Connection, values, id: int) -> None:
+    """
+    Insert a match with its attributes values in the database
+
+    :param conn: Connection to the database
+    :param values: Values of the attributes (array)
+    :param id: Id of the map
+    :return: None
+    """
+
+
     cur = conn.cursor()
 
     # Query
@@ -294,6 +303,14 @@ def insert_match(conn: sqlite3.dbapi2.Connection, values, id: int) -> None:
 
 
 def reset_map_table(conn: sqlite3.dbapi2.Connection) -> None:
+    """
+    Reset the database two default state
+
+    :param conn: Connection to the database
+    :return:
+    """
+
+
     drop_map_mapping = "DROP TABLE `MAP_MAPPING`;"
     create_map_mapping = """CREATE TABLE `MAP_MAPPING` (
     	`MAP_NAME` VARCHAR NOT NULL,
@@ -330,6 +347,19 @@ def reset_map_table(conn: sqlite3.dbapi2.Connection) -> None:
 
 
 def insert_map(conn: sqlite3.dbapi2.Connection, map_name: str, mode_type: str, pool: str, authors_string: str, path: str, coords: str) -> None:
+    """
+    Insert a map in the database with its values
+
+    :param conn: Connection to the database
+    :param map_name: Name of the map
+    :param mode_type: Mod type of the map (e.g. ctw, ctm,...)
+    :param pool: Name of the pool (e.g. nano, micro,...)
+    :param authors_string: Name of the authors of the map (array)
+    :param path: File path of the map
+    :param coords: Coords of the spawn of the map
+    :return:
+    """
+
     cur = conn.cursor()
 
     try:

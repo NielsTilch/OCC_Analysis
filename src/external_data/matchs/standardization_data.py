@@ -5,11 +5,16 @@ import numpy as np
 import pandas as pd
 
 
-'''
-Change length of match into standard time
-Return : List[hour : String ,minute : String, second : String]
-'''
-def length_to_standart_time(length,cloudy_ver):
+def length_to_standart_time(length: str,cloudy_ver: int) -> list[str]:
+    """
+    Change length of match into standard time
+
+    :param length: Length of a match (different format depending of cloudy's version)
+    :param cloudy_ver: Cloudy's version
+    :return: [hour: String, minute: String, second: String] (Standardize length map format)
+    """
+
+
     list = []
 
     #Cloudy Version 1 format
@@ -60,6 +65,13 @@ def length_to_standart_time(length,cloudy_ver):
 
 
 def date_mutation(date):
+    """
+    Transform date into another form of date
+    From "DD-MMM-YY HH:MM" to [['DD','MM','YY'],['HH','MM']]
+
+    :param date:
+    :return:
+    """
 
     year_hour_separator = date.split(" ")
     ymd_date = year_hour_separator[0].split("-")
@@ -98,14 +110,15 @@ def date_mutation(date):
     return constructor_date
 
 
-
-'''
-Extract data from CSV into a new CSV
-New csv name : new_data.csv
-
-Return : None
-'''
 def extract_data_to_newdf(cfg):
+    """
+    Extract data from CSV into an optimize CSV file
+
+    :param cfg: Name of the CSV file
+    :return:
+    """
+
+
     #Read file
     df = pd.read_csv(cfg.origin)
 
@@ -154,9 +167,3 @@ parser.add_argument('--new', type=str, default="new_data.csv",help='New data fil
 cfg = parser.parse_args()
 
 extract_data_to_newdf(cfg)
-
-
-#Tests
-#print(length_to_standart_time('32m',3))
-#print(length_to_standart_time('4 seconds',1))
-#print(date_mutation("27-Dec-20 10:14 PM"))
