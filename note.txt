@@ -1,0 +1,3 @@
+Notes for the experiment :
+- EC2 instance in Canada Centrale az
+- Around 350ms to retrieve the data to db

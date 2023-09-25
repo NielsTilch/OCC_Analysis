@@ -14,6 +14,7 @@
 ./external_data/maps/CommunityMaps/arcade/runner/deathrun_aperture/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/blockglitch/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/blockglitch_2_electric_boogaloo/map.xml
+./external_data/maps/CommunityMaps/arcade/standard/blockglitch_3/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/bn_dark_nebula/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/bomber_guys/map.xml
 ./external_data/maps/CommunityMaps/arcade/standard/dodge_ball/map.xml
@@ -206,6 +207,8 @@
 ./external_data/maps/CommunityMaps/ctw/standard/welcome_to_wool_circle/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/when_men_cried/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/wholething/map.xml
+./external_data/maps/CommunityMaps/ctw/standard/winterbane/map.xml
+./external_data/maps/CommunityMaps/ctw/standard/wintertime/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/witchs_potions/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/xinx/map.xml
 ./external_data/maps/CommunityMaps/ctw/standard/xunkohtli/map.xml
@@ -256,6 +259,7 @@
 ./external_data/maps/CommunityMaps/dtcm/standard/mushroom_monuments/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/mythica_dtm/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/natsukashii/map.xml
+./external_data/maps/CommunityMaps/dtcm/standard/neptune/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/operation_overlord/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/parabola/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/parabola_ii/map.xml
@@ -265,6 +269,7 @@
 ./external_data/maps/CommunityMaps/dtcm/standard/quintlet/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/re_the_end_kingdom/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/rind_rushers/map.xml
+./external_data/maps/CommunityMaps/dtcm/standard/rock_the_casbah/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/royal_ascend/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/salvo_but_its_a_castle_and_theres_2x_monuments/map.xml
 ./external_data/maps/CommunityMaps/dtcm/standard/sheer_heart_attack/map.xml
@@ -305,10 +310,12 @@
 ./external_data/maps/CommunityMaps/flag/standard/ciudad_costera/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/courtyard_classic/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/crater_resort/map.xml
+./external_data/maps/CommunityMaps/flag/standard/crystal/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/disc_wars_ii/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/embargo/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/flag_football_ice_rift/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/flag_football_nyc/map.xml
+./external_data/maps/CommunityMaps/flag/standard/friday_night_lights/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/happy_rainbow/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/hirap/map.xml
 ./external_data/maps/CommunityMaps/flag/standard/kahilyo/map.xml
@@ -362,6 +369,7 @@
 ./external_data/maps/CommunityMaps/koth/standard/the_end_koth/map.xml
 ./external_data/maps/CommunityMaps/koth/standard/war_for_iacon/map.xml
 ./external_data/maps/CommunityMaps/mixed/halloween/boo'ai/map.xml
+./external_data/maps/CommunityMaps/mixed/standard/avant_garde/map.xml
 ./external_data/maps/CommunityMaps/mixed/standard/malupa/map.xml
 ./external_data/maps/CommunityMaps/mixed/standard/moai/map.xml
 ./external_data/maps/CommunityMaps/mixed/standard/mythical_marsh/map.xml
@@ -370,6 +378,7 @@
 ./external_data/maps/CommunityMaps/mixed/standard/ziggurat/map.xml
 ./external_data/maps/CommunityMaps/other/ctp/paintmans_day_off/map.xml
 ./external_data/maps/CommunityMaps/other/ctp/paint_the_streets/map.xml
+./external_data/maps/CommunityMaps/other/ctp/tug_of_war/map.xml
 ./external_data/maps/CommunityMaps/other/gs/gs_beholder/map.xml
 ./external_data/maps/CommunityMaps/other/gs/gs_chandelier/map.xml
 ./external_data/maps/CommunityMaps/other/gs/gs_earthborn/map.xml
@@ -403,6 +412,7 @@
 ./external_data/maps/CommunityMaps/scorebox/standard/miner_sixty_niner/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/mont_blanc/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/over_troubled_water/map.xml
+./external_data/maps/CommunityMaps/scorebox/standard/pixie/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/polders/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/rangi_nui/map.xml
 ./external_data/maps/CommunityMaps/scorebox/standard/research/map.xml
@@ -681,10 +691,12 @@
 ./external_data/maps/PublicMaps/dtcm/standard/justice_1/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/justice_2/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/jyngli/map.xml
+./external_data/maps/PublicMaps/dtcm/standard/ki/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/kyoto/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/lasa/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/library_dte/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/loyalty_dtm/map.xml
+./external_data/maps/PublicMaps/dtcm/standard/mars_odyssey/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/masarin_ii/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/mayan_apocalypse/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/medieval_warfare/map.xml
@@ -757,6 +769,8 @@
 ./external_data/maps/PublicMaps/dtcm/standard/total_war/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/tree_of_life/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/tree_of_life_mini/map.xml
+./external_data/maps/PublicMaps/dtcm/standard/wallop_9000/map.xml
+./external_data/maps/PublicMaps/dtcm/standard/wallop_series_x/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/warlock/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/winsray_fields/map.xml
 ./external_data/maps/PublicMaps/dtcm/standard/wintery_cabin/map.xml
@@ -802,6 +816,7 @@
 ./external_data/maps/PublicMaps/ffa/standard/pompeii_rage/map.xml
 ./external_data/maps/PublicMaps/ffa/standard/pumpkin_spice_latte/map.xml
 ./external_data/maps/PublicMaps/ffa/standard/rage_quit_ffa/map.xml
+./external_data/maps/PublicMaps/ffa/standard/raid_ffa/map.xml
 ./external_data/maps/PublicMaps/ffa/standard/rig_ffa/map.xml
 ./external_data/maps/PublicMaps/ffa/standard/stagnant_waters/map.xml
 ./external_data/maps/PublicMaps/ffa/standard/stonehenge/map.xml
@@ -905,7 +920,6 @@
 ./external_data/maps/PublicMaps/fun/arcade/boat_bolt/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/cacti_terror/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/crazys_wool_run/map.xml
-./external_data/maps/PublicMaps/fun/arcade/creeper_return/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/creep_slap/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/crossfire/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/dogfight/map.xml
@@ -916,7 +930,7 @@
 ./external_data/maps/PublicMaps/fun/arcade/humble_jungle/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/ice_miners/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/juggernauts_hall/map.xml
-./external_data/maps/PublicMaps/fun/arcade/juggernaut_s_hamlet/map.xml
+./external_data/maps/PublicMaps/fun/arcade/juggernauts_hamlet/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/kings_conquest_easter/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/kings_conquest_proelium/map.xml
 ./external_data/maps/PublicMaps/fun/arcade/kings_conquest_rage_quit/map.xml
@@ -1096,6 +1110,7 @@
 ./external_data/maps/PublicMaps/other/newstalgia/medieval_clayfare/map.xml
 ./external_data/maps/PublicMaps/other/newstalgia/race_for_clay/map.xml
 ./external_data/maps/PublicMaps/other/newstalgia/spaceclay_battles/map.xml
+./external_data/maps/PublicMaps/other/payload/long_shot_payload/map.xml
 ./external_data/maps/PublicMaps/other/rfw/parallax/map.xml
 ./external_data/maps/PublicMaps/other/scorebox/necro/map.xml
 ./external_data/maps/PublicMaps/tdm/christmas/festive_venice/map.xml
